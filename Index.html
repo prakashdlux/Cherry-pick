@@ -1,0 +1,63 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bike</title>
+        <link rel="stylesheet" href="index.css" />
+      </head>
+      <body>
+        <header class="header">
+          <nav class="navbar">
+            <div class="navbar-left">
+              <img src="images.png" alt="Shoe Logo" class="logo" />
+            </div>
+            <div class="navbar-center">
+              <h1 class="bike-heading">Royal Enfield</h1>
+            </div>
+            <div class="navbar-right" id="navbar-right"></div>
+          </nav>
+        </header>
+ 
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const navbarRight = document.getElementById("navbar-right");
+ 
+            const bikeDropdown = document.createElement("div");
+            bikeDropdown.className = "dropdown";
+            bikeDropdown.innerHTML = `
+                        <button class="dropbtn">Bike</button>
+                        <div class="dropdown-content">
+                            <div class="dropdown-submenu">
+                                <a href="#">350cc</a>
+                                <div class="dropdown-content-sub">
+                                    <a href="#">Classic Model</a>
+                                    <a href="#">Sports Model</a>
+                                    <a href="#">Standard</a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+ 
+            navbarRight.appendChild(bikeDropdown);
+ 
+        
+            const loginDropdown = document.createElement("div");
+            loginDropdown.className = "dropdown";
+            loginDropdown.innerHTML = `
+                        <button class="dropbtn">Login</button>
+                        <div class="dropdown-content">
+                            <a href="#">Login</a>
+                            <a href="#">Signup</a>
+                            <a href="#">Logout</a>
+                        </div>
+                    `;
+ 
+            navbarRight.appendChild(loginDropdown);
+          });
+        </script>
+      </body>
+    </html>
+  </body>
+</html>
